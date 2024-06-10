@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+   xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="
+        http://java.sun.com/xml/ns/persistence">
+<persistence-unit name="nesta" transaction-type="JTA">
+<provider>org.hibernate.ejb.HibernatePersistence</provider>
+<jta-data-source>java:/smartlab</jta-data-source>
+<jar-file>lib/sgil_entity-1.0.jar</jar-file>
+<properties>
+
+<property name="hibernate.dialect" value="hksarg.sgil.util.MySQLInnoDBDialect"/>
+<property name="hibernate.show_sql" value="false"/>
+<property name="hibernate.use_sql_comments" value="false"/>
+<property name="hibernate.generate_statistics" value="false"/>
+<property name="hibernate.hbm2ddl.auto" value="update"/>
+<property name="hibernate.connection.char_set" value="UTF-8" />
+<property name="hibernate.archive.autodetection" value="class"/>
+<property name="org.hibernate.envers.audit_table_suffix" value="" />
+<property name="org.hibernate.envers.audit_table_prefix" value="LOG_" />
+<property name="org.hibernate.envers.store_data_at_delete" value="true"/>
+<property name="org.hibernate.envers.do_not_audit_optimistic_locking_field" value="false"/>
+</properties>
+</persistence-unit>
+</persistence>
